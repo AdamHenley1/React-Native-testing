@@ -52,7 +52,7 @@ const HomePage = () => {
         renderItem={({item}) => (<Item title={item.name}/>)}
       />
       
-      <Text style ={styles.text}>- Add a page that allows for me to add theimages</Text>
+      <Text style ={styles.text}>- Add a page that allows for me to add the images</Text>
       {/* another list on what i will need to do on the home page */}
       <Text style = {Liststyle.flatlistheader}>- Have the home page show the images you have added</Text>
       <FlatList
