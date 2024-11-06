@@ -87,18 +87,19 @@ const Liststyle = StyleSheet.create({
   text: {
     fontSize: 12,
     color: textcolour,
+    textAlign: "center",
   },
   flatlists:{
     flexGrow: 0,
-    borderWidth: 1,
     borderColor: textcolour,
+    textAlign: "center",
+    
     },
   flatlistheader: {
     fontSize: 14,
     color: textcolour,
+    textAlign: "center",
 
-    borderWidth: 1,
-    borderColor: textcolour,
 
     flexGrow: 0,
     paddingLeft: 10,
@@ -109,10 +110,15 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     color: textcolour,
+    textAlign: 'center',
   },
   text: {
     fontSize: 14,
     color: textcolour,
+    paddingTop: 2,
+    paddingBottom: 2,
+    paddingLeft: 5,
+    textAlign: "center",
   }
 });
 
