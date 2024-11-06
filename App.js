@@ -7,24 +7,30 @@ import {
   SafeAreaView
 } from 'react-native';
 
-const Item = ({title}) => (
-  <View style={Liststyle.main}>
-    <Text style={Liststyle.text}>{title}</Text>
+//Text Colour to make it easier to change
+var textcolour = "#d6d6d6"
+
+// Items in the list and how it will show them in the list
+const Item = ({text}) => (
+  <View style = {Liststyle.main}>
+    <Text style = {Liststyle.text}>{text}</Text>
   </View>
 );
 
 // this will be the home page that will default here and due to being local this will be profile page to see all of your art work
 // for settings im going to add a lot of features to show of coding skills as im limited to being local however ill code it as its treated like its a server
 const HomePage = () => {
-  let ary = [
+  {/*this the list of things i need to do in settings */}
+  let Settingslist = [
     {
        id:1,
-       name:'- banner on the top page to go to setting',
+       name:"- banner on the top page to go to setting",
     },
      {
        id:2,
-       name:'- In settings have a section to change the colour of the app',
+       name:"- In settings have a section to change the colour of the app",
     }]
+  {/*this the list of things i need to do on the home page */}
   let imagehomepage = [
     {
       id:1,
@@ -40,26 +46,26 @@ const HomePage = () => {
     }
   ]
   return (
-      <SafeAreaView style={bodystyle.container}>
+      <SafeAreaView style = {bodystyle.container}>
       {/* the to do list heading */}
       <Text style = {styles.header}>To Do list</Text>
       {/* list for the things in settings that i will need to do */}
-      <Text style = {Liststyle.flatlistheader}>- Settings</Text>
+      <Text style = {Liststyle.flatlistheader}> - Settings</Text>
       <FlatList 
         style = {Liststyle.flatlists}
-        keyExtractor={item => item.id}
-        data={ary}
-        renderItem={({item}) => (<Item title={item.name}/>)}
+        keyExtractor = {item => item.id}
+        data = {Settingslist}
+        renderItem = {({item}) => (<Item text={item.name}/>)}
       />
       
-      <Text style ={styles.text}>- Add a page that allows for me to add the images</Text>
+      <Text style = {styles.text}> - Add a page that allows for me to add the images</Text>
       {/* another list on what i will need to do on the home page */}
-      <Text style = {Liststyle.flatlistheader}>- Have the home page show the images you have added</Text>
+      <Text style = {Liststyle.flatlistheader}> - Have the home page show the images you have added</Text>
       <FlatList
         style = {Liststyle.flatlists}
         keyExtractor = {item => item.id}
         data = {imagehomepage}
-        renderItem = {({item}) => (<Item title = {item.name}/>)}
+        renderItem = {({item}) => (<Item text = {item.name}/>)}
       />
 
     </SafeAreaView>
@@ -80,19 +86,19 @@ const Liststyle = StyleSheet.create({
   },
   text: {
     fontSize: 12,
-    color: '#d6d6d6',
+    color: textcolour,
   },
   flatlists:{
     flexGrow: 0,
     borderWidth: 1,
-    borderColor: '#d6d6d6',
+    borderColor: textcolour,
     },
   flatlistheader: {
     fontSize: 14,
-    color: '#d6d6d6',
+    color: textcolour,
 
     borderWidth: 1,
-    borderColor: '#d6d6d6',
+    borderColor: textcolour,
 
     flexGrow: 0,
     paddingLeft: 10,
@@ -102,11 +108,11 @@ const styles = StyleSheet.create({
   header: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#d6d6d6',
+    color: textcolour,
   },
   text: {
     fontSize: 14,
-    color: '#d6d6d6',
+    color: textcolour,
   }
 });
 
