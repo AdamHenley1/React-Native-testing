@@ -52,7 +52,7 @@ const HomePage = () => {
         renderItem={({item}) => (<Item title={item.name}/>)}
       />
       
-      <Text>- Add a page that allows for me to add theimages</Text>
+      <Text style ={styles.text}>- Add a page that allows for me to add theimages</Text>
       {/* another list on what i will need to do on the home page */}
       <Text style = {Liststyle.flatlistheader}>- Have the home page show the images you have added</Text>
       <FlatList
@@ -70,33 +70,43 @@ const bodystyle = StyleSheet.create({
   container: {
     flex: 1,
     padding: 50,
+    backgroundColor: '#6c1c97',
   },
 });
 const Liststyle = StyleSheet.create({
   main: {
-    fontSize: 15,
-    backgroundColor: '#ffffff',
-    padding: 0,
     marginVertical: 1,
     marginHorizontal: 16,
   },
   text: {
     fontSize: 12,
+    color: '#d6d6d6',
   },
   flatlists:{
     flexGrow: 0,
     borderWidth: 1,
+    borderColor: '#d6d6d6',
     },
   flatlistheader: {
+    fontSize: 14,
+    color: '#d6d6d6',
+
+    borderWidth: 1,
+    borderColor: '#d6d6d6',
+
     flexGrow: 0,
     paddingLeft: 10,
-    fontSize: 14,
-    borderWidth: 1,
   }
 });
 const styles = StyleSheet.create({
   header: {
     fontSize: 20,
+    fontWeight: 'bold',
+    color: '#d6d6d6',
+  },
+  text: {
+    fontSize: 14,
+    color: '#d6d6d6',
   }
 });
 
