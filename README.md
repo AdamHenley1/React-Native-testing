@@ -1,1 +1,2 @@
 # pixly
+pixly is the a react native app I am building for my Computer Science A-Level NEA which will help me learn how to build apps using said language and aid me in progressing my programming knowledge ONLY the code will be posted and not the documentation until after my NEA has been marked and I have been given the clear to post it.
